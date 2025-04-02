@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trilha de Conhecimento | Pretas no topo</title>
+    <link rel="icon" type="image/png" href="Persona.png">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ff69b4, #ff1493, #800080);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .header {
+            width: 100%;
+            padding: 15px 0;
+            background: rgba(0, 0, 0, 0.8);
+            box-shadow: 0px 4px 10px rgba(255, 20, 147, 0.5);
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            z-index: 10;
+        }
+
+        .header a {
+            color: #ff69b4;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .header a:hover {
+            text-decoration: underline;
+        }
+
+        .content-container {
+            margin-top: 100px;
+            width: 80%;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(255, 20, 147, 0.5);
+            text-align: center;
+        }
+
+        .content-container h2 {
+            color: #ff1493;
+        }
+
+        .path-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .step {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .step button {
+            width: 80px;
+            height: 80px;
+            background-color: #ff69b4;
+            color: white;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px;
+            box-shadow: 0px 4px 10px rgba(255, 20, 147, 0.5);
+            transition: transform 0.2s ease, background-color 0.3s ease;
+        }
+
+        .step button:hover {
+            background-color: #ff1493;
+            transform: scale(1.1);
+        }
+
+        .step .label {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #ff1493;
+        }
+
+        .connector {
+            width: 5px;
+            height: 40px;
+            background-color: #ff1493;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <a href="Home.html">Home</a>
+        <a href="Trilha.html">Trilha de Conhecimento</a>
+        <a href="#">Comunidade Telegram</a>
+        <a href="Artigos_cientificos.html">Artigos Científicos</a>
+    </div>
+
+    <div class="content-container">
+        <h2>Trilha de Conhecimento</h2>
+        <div class="path-container">
+            <div class="step">
+                <button onclick="alert('Serviço indisponível no momento')">🏆</button>
+                <div class="label">Concluir etapa</div>
+            </div>
+            <div class="connector"></div>
+            <div class="step">
+                <button onclick="alert('Serviço indisponível no momento')">🔝</button>
+                <div class="label">Especialização e Alta Perfomance</div>
+            </div>
+            <div class="connector"></div>
+            <div class="step">
+                <button onclick="alert('Serviço indisponível no momento')">💭</button>
+                <div class="label">Estratégias avançadas e conversão</div>
+            </div>
+            <div class="connector"></div>
+            <div class="step">
+                <button onclick="alert('Serviço indisponível no momento')">💻</button>
+                <div class="label">Marketing digital e estratégias online</div>
+            </div>
+            </div>
+            <div class="connector"></div>
+            <div class="step">
+                <button onclick="location.href='quiz.html'">🌎</button>
+                <div class="label">Fundamentos do Marketing</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
