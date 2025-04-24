@@ -38,8 +38,8 @@ body {
 /* Estilo da logo centralizada  */
 /* ------------------------------ */
 .logo {
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   background-color: #fff;
   border-radius: 50%;
   margin: 0 auto 30px;
@@ -80,7 +80,7 @@ body {
   left: 0;
   width: 100%;
   background-color: #ff69b4;
-  padding: 10px;
+  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -94,15 +94,17 @@ body {
 
 .header-nav {
   display: flex;
+  gap: 10px;
   flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .header-link {
   color: #fff;
   text-decoration: none;
-  margin-left: 12px;
   font-weight: bold;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  white-space: nowrap;
 }
 
 .header-link:hover {
@@ -127,8 +129,11 @@ body {
 .carousel-image {
   flex: 0 0 100%;
   display: none;
-  max-height: 200px; /* menor altura para melhor adaptação mobile */
-  object-fit: cover;
+  max-width: 100%;
+  max-height: 180px;
+  height: auto;
+  object-fit: contain; /* Garante que a imagem seja exibida inteira */
+  margin: 0 auto;
 }
 
 .carousel-image.active {
@@ -183,11 +188,11 @@ body {
   }
 
   .carousel-image {
-    max-height: 150px;
+    max-height: 100px; /* imagens menores para telas pequenas */
   }
 
   .header-link {
-    font-size: 0.8rem;
-    margin-left: 8px;
+    font-size: 0.75rem;
+    margin-left: 6px;
   }
 }
