@@ -94,21 +94,30 @@ body {
 
 .header-nav {
   display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  justify-content: flex-end;
+  gap: 12px;
+  justify-content: center; /* Centraliza os links horizontalmente */
+  flex: 1;
 }
 
 .header-link {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   white-space: nowrap;
+  padding: 6px 8px;
 }
 
 .header-link:hover {
   color: #e055a7;
+}
+
+/* Responsivo para mobile */
+@media (max-width: 480px) {
+  .header-link {
+    font-size: 0.7rem;
+    padding: 4px 6px;
+  }
 }
 
 /* ------------------------------ */
@@ -122,18 +131,23 @@ body {
 }
 
 .carousel-images {
-  display: flex;
-  transition: transform 0.5s ease;
+  .carousel-image {
+    flex: 0 0 100%;
+    display: none;
+    max-height: 600px; /* ajusta o tamanho da imagem do carrossel */
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto;
+    background-color: #000; /* fundo para destacar imagem se for menor */
+  }
 }
 
 .carousel-image {
-  flex: 0 0 100%;
-  display: none;
-  max-width: 100%;
-  max-height: 500px;
-  height: auto;
-  object-fit: contain; /* Garante que a imagem seja exibida inteira */
-  margin: 0 auto;
+  max-height: 500px; /* Tamanho ideal ajustado */
+  width: 100%;
+  object-fit: contain; /* Garante que a imagem não será cortada */
+  background-color: #000;
 }
 
 .carousel-image.active {
