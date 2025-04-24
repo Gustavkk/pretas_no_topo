@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Página Inicial</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Cabeçalho -->
+  <header class="header">
+    <div class="header-logo">
+      <img src="logo.png" alt="Logo" class="header-logo-img" />
+    </div>
+    <nav class="header-nav">
+      <a href="index.html" class="header-link">Home</a>
+      <a href="trilha.html" class="header-link">Trilha</a>
+      <a href="comunidade.html" class="header-link">Comunidade</a>
+      <a href="artigos.html" class="header-link">Artigos</a>
+    </nav>
+  </header>
+
+  <!-- Carrossel de Imagens -->
+  <div class="carousel">
+    <div class="carousel-images">
+      <img src="IMG1.jpg" alt="Imagem 1" class="carousel-image">
+      <img src="IMG2.jpg" alt="Imagem 2" class="carousel-image">
+      <img src="IMG3.jpg" alt="Imagem 3" class="carousel-image">
+      <img src="IMG4.jpg" alt="Imagem 4" class="carousel-image">
+    </div>
+    <div class="carousel-controls">
+      <button class="carousel-btn prev-btn">←</button>
+      <button class="carousel-btn next-btn">→</button>
+    </div>
+  </div>
+
+  <!-- Dedicatória do site -->
+  <div class="dedication">
+    <p>Lorem ipsum dolor sit amet. Et labore provident et accusantium explicabo sed voluptatem perspiciatis nam velit magnam eos velit magni. Ut dolores consequuntur eos iste rerum non repellat soluta est temporibus dolorem. Aut laboriosam voluptatum ut voluptatem quibusdam aut corrupti possimus qui iste.</p>
+  </div>
+
+  <script src="script.js" defer></script>
+  
+  <script>
+    // Carrega o header.html e insere no container
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-container').innerHTML = data;
+      });
+  </script>
+</body>
+</html>
