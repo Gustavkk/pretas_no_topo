@@ -1,0 +1,151 @@
+/* styles.css */
+
+/* Reset básico e boas práticas */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background: linear-gradient(to bottom, #3f3f3f, #000);
+  color: #fff;
+  height: 100vh;
+  padding: 40px 20px;
+}
+
+.container {
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Título principal personalizado */
+.main-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ff69b4;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Logo centralizada e em formato circular */
+.logo {
+  width: 300px;
+  height: 300px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin: 0 auto 30px;
+  background-image: url('logo.png');
+  background-size: 150%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Botão estilizado e acessível com tamanho aumentado */
+.btn-enter {
+  background-color: #ff69b4;
+  border: 2px dashed #d94c96;
+  color: #fff;
+  padding: 24px 48px;
+  font-size: 1.5rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-enter:hover {
+  background-color: #e055a7;
+}
+
+.btn-enter.clicked {
+  transform: scale(0.95);
+}
+
+/* Cabeçalho fixo com navegação */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ff69b4;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.header-logo-img {
+  width: 50px;
+  height: auto;
+}
+
+.header-nav {
+  display: flex;
+}
+
+.header-link {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.header-link:hover {
+  color: #e055a7;
+}
+
+/* Estrutura do carrossel de imagens */
+.carousel {
+  margin: 120px auto 40px;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-image {
+  flex: 0 0 100%;
+  display: none;
+}
+
+.carousel-image.active {
+  display: block;
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.carousel-btn {
+  background-color: rgba(255, 105, 180, 0.8);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-btn:hover {
+  background-color: #d94c96;
+}
+
+/* Dedicatória */
+.dedication {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 30px 20px;
+  color: #eee;
+}
