@@ -1,6 +1,8 @@
 /* styles.css */
 
-/* Reset básico e boas práticas */
+/* ------------------------------ */
+/* Reset básico e layout geral */
+/* ------------------------------ */
 * {
   margin: 0;
   padding: 0;
@@ -11,8 +13,8 @@ body {
   font-family: sans-serif;
   background: linear-gradient(to bottom, #3f3f3f, #000);
   color: #fff;
-  height: 100vh;
-  padding: 40px 20px;
+  min-height: 100vh;
+  padding: 100px 20px 40px;
 }
 
 .container {
@@ -21,7 +23,9 @@ body {
   margin: 0 auto;
 }
 
-/* Título principal personalizado */
+/* ------------------------------ */
+/* Estilos do título principal  */
+/* ------------------------------ */
 .main-title {
   font-size: 2rem;
   font-weight: bold;
@@ -30,10 +34,12 @@ body {
   text-align: center;
 }
 
-/* Logo centralizada e em formato circular */
+/* ------------------------------ */
+/* Estilo da logo centralizada  */
+/* ------------------------------ */
 .logo {
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
   background-color: #fff;
   border-radius: 50%;
   margin: 0 auto 30px;
@@ -43,7 +49,9 @@ body {
   background-repeat: no-repeat;
 }
 
-/* Botão estilizado e acessível com tamanho aumentado */
+/* ------------------------------ */
+/* Estilo do botão "Entrar"      */
+/* ------------------------------ */
 .btn-enter {
   background-color: #ff69b4;
   border: 2px dashed #d94c96;
@@ -63,14 +71,16 @@ body {
   transform: scale(0.95);
 }
 
-/* Cabeçalho fixo com navegação */
+/* ------------------------------ */
+/* Cabeçalho fixo com navegação  */
+/* ------------------------------ */
 .header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   background-color: #ff69b4;
-  padding: 20px;
+  padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -78,28 +88,32 @@ body {
 }
 
 .header-logo-img {
-  width: 50px;
+  width: 40px;
   height: auto;
 }
 
 .header-nav {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .header-link {
   color: #fff;
   text-decoration: none;
-  margin-left: 20px;
+  margin-left: 12px;
   font-weight: bold;
+  font-size: 0.9rem;
 }
 
 .header-link:hover {
   color: #e055a7;
 }
 
-/* Estrutura do carrossel de imagens */
+/* ------------------------------ */
+/* Estilo do carrossel de imagens */
+/* ------------------------------ */
 .carousel {
-  margin: 120px auto 40px;
+  margin: 40px auto;
   position: relative;
   max-width: 100%;
   overflow: hidden;
@@ -113,6 +127,8 @@ body {
 .carousel-image {
   flex: 0 0 100%;
   display: none;
+  max-height: 200px; /* menor altura para melhor adaptação mobile */
+  object-fit: cover;
 }
 
 .carousel-image.active {
@@ -132,8 +148,8 @@ body {
   background-color: rgba(255, 105, 180, 0.8);
   color: #fff;
   border: none;
-  padding: 10px 20px;
-  font-size: 1.5rem;
+  padding: 8px 12px;
+  font-size: 1.2rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -142,10 +158,36 @@ body {
   background-color: #d94c96;
 }
 
-/* Dedicatória */
+/* ------------------------------ */
+/* Estilo da dedicatória         */
+/* ------------------------------ */
 .dedication {
   font-size: 1rem;
   line-height: 1.6;
   margin: 30px 20px;
   color: #eee;
+  text-align: center;
+}
+
+/* ------------------------------ */
+/* Estilos para dispositivos móveis */
+/* ------------------------------ */
+@media (max-width: 480px) {
+  .btn-enter {
+    padding: 16px 32px;
+    font-size: 1.2rem;
+  }
+
+  .main-title {
+    font-size: 1.5rem;
+  }
+
+  .carousel-image {
+    max-height: 150px;
+  }
+
+  .header-link {
+    font-size: 0.8rem;
+    margin-left: 8px;
+  }
 }
