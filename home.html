@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página Inicial</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="header">
+        <div class="header-logo">
+            <img src="logo.png" alt="Logo" class="header-logo-img" />
+        </div>
+        <nav class="header-nav">
+            <a href="index.html" class="header-link">Home</a>
+            <a href="trilha.html" class="header-link">Trilha</a>
+            <a href="comunidade.html" class="header-link">Comunidade</a>
+            <a href="artigos.html" class="header-link">Artigos</a>
+        </nav>
+    </header>
+
+    <!-- Carrossel de Imagens -->
+    <div class="carousel">
+        <div class="carousel-images">
+            <img src="IMG1.jpg" alt="Imagem 1" class="carousel-image">
+            <img src="IMG2.jpg" alt="Imagem 2" class="carousel-image">
+            <img src="IMG3.jpg" alt="Imagem 3" class="carousel-image">
+        </div>
+        <div class="carousel-controls">
+            <button class="carousel-btn prev-btn">←</button>
+            <button class="carousel-btn next-btn">→</button>
+        </div>
+    </div>
+
+    <!-- Dedicatória do site -->
+    <p>
+        Este projeto foi desenvolvido pelos alunos <strong>Gustavo Maciel, Matheus Tomceac, Isabelli Amaral</strong> e <strong>Solange Chumacero</strong>, nas disciplinas de <strong>Design Thinking 1</strong> e <strong>Design Thinking 2</strong>, sob orientação dos professores <strong>Letícia</strong> e <strong>Jean</strong>, na <strong>Faculdade Sebrae</strong>.
+    </p>
+
+    <p>
+        A iniciativa está fundamentada nos Objetivos de Desenvolvimento Sustentável da ONU, com foco específico na <strong>ODS 8 – Trabalho Decente e Crescimento Econômico</strong>, que visa promover o crescimento econômico sustentado, inclusivo e sustentável, com emprego pleno, produtivo e trabalho decente para todas as pessoas.
+    </p>
+
+    <h3>Nossa Missão</h3>
+    <p>
+        Nossa proposta busca gerar impacto positivo na vida de <strong>mulheres negras empreendedoras</strong>, oferecendo conteúdo acessível e de qualidade que possa fortalecer seus negócios e impulsionar suas vendas.
+    </p>
+
+    <h3>Como ajudamos?</h3>
+    <p>Criamos uma plataforma digital com conteúdos direcionados sobre marketing digital, abordando:</p>
+
+    <ul>
+        <li>Noções básicas de marketing para iniciantes</li>
+        <li>Uso estratégico das redes sociais para divulgação</li>
+        <li>Criação de identidade visual e posicionamento de marca</li>
+        <li>Ferramentas gratuitas e acessíveis para gestão de conteúdo</li>
+        <li>Dicas de anúncios pagos (Facebook Ads e Google Ads)</li>
+        <li>Planejamento e calendário de postagens</li>
+    </ul>
+
+    <p>
+        Nosso objetivo é <strong>informar, capacitar e inspirar</strong>, contribuindo para uma economia mais justa, onde o conhecimento é uma ponte para a autonomia e o sucesso nos negócios.
+    </p>
+    </div>
+    <script src="script.js" defer></script>
+
+    <script>
+        // Carrega o header.html e insere no container
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+    </script>
+</body>
+</html></html>

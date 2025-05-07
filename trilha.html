@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trilha de Conhecimento</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Cabeçalho fixo da página -->
+    <header class="header">
+        <img src="logo.png" alt="Logo" class="header-logo-img" />
+        <nav class="header-nav">
+            <a href="home.html" class="header-link">Home</a>
+            <a href="trilha.html" class="header-link">Trilha</a>
+            <a href="comunidade.html" class="header-link">Comunidade</a>
+            <a href="artigos.html" class="header-link">Artigos</a>
+        </nav>
+    </header>
+
+    <!-- Seção principal da trilha de conhecimento -->
+    <main class="container trilha-section">
+        <h1 class="main-title">Trilha de Conhecimento</h1>
+
+        <!-- Etapas disponíveis -->
+        <a href="mkt01.html" class="trail-button">
+            <span class="icon icon-marketing"></span>
+            <span>Entendendo o Básico do Marketing</span>
+        </a>
+
+          <a href="mkt02.html" class="trail-button">
+            <span class="icon icon-digital"></span>
+            <span>Presença Digital Essencial</span>
+</a>
+
+        <!-- Etapas futuras (desativadas) -->
+
+        <button class="trail-button trail-disabled" data-topic="Comunicação e Relacionamento com o Cliente">
+            <span class="icon icon-relacionamento"></span>
+            <span>Comunicação e Relacionamento com o Cliente</span>
+        </button>
+
+        <button class="trail-button trail-disabled" data-topic="Marketing de Conteúdo para Iniciantes">
+            <span class="icon icon-conteudo"></span>
+            <span>Marketing de Conteúdo para Iniciantes</span>
+        </button>
+
+        <button class="trail-button trail-disabled" data-topic="Métricas e Primeiros Passos para Análise">
+            <span class="icon icon-metricas"></span>
+            <span>Métricas e Primeiros Passos para Análise</span>
+        </button>
+    </main>
+
+    <!-- Script: exibe alerta ao clicar em botões desabilitados -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.trail-disabled').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const topic = btn.getAttribute('data-topic');
+                    alert(`Conteúdo "${topic}" estará disponível em breve!`);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

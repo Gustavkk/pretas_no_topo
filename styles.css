@@ -1,0 +1,434 @@
+/* styles.css */
+
+/* ------------------------------ */
+/* Reset básico e layout geral */
+/* ------------------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background: linear-gradient(to bottom, #3f3f3f, #000);
+  color: #fff;
+  min-height: 100vh;
+  padding: 100px 20px 40px;
+}
+
+.container {
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* ------------------------------ */
+/* Estilos do título principal  */
+/* ------------------------------ */
+.main-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ff69b4;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* ------------------------------ */
+/* Estilo da logo centralizada  */
+/* ------------------------------ */
+.logo {
+  width: 300px;
+  height: 300px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin: 0 auto 30px;
+  background-image: url('logo.png');
+  background-size: 150%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ------------------------------ */
+/* Estilo do botão "Entrar"      */
+/* ------------------------------ */
+.btn-enter {
+  background-color: #ff69b4;
+  border: 2px dashed #d94c96;
+  color: #fff;
+  padding: 24px 48px;
+  font-size: 1.5rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-enter:hover {
+  background-color: #e055a7;
+}
+
+.btn-enter.clicked {
+  transform: scale(0.95);
+}
+
+/* ------------------------------ */
+/* Cabeçalho fixo com navegação  */
+/* ------------------------------ */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ff69b4;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.header-logo-img {
+  width: 60px;
+  height: auto;
+}
+
+.header-nav {
+  display: flex;
+  gap: 12px;
+  justify-content: center; /* Centraliza os links horizontalmente */
+  flex: 1;
+}
+
+.header-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  padding: 6px 8px;
+}
+
+.header-link:hover {
+  color: #e055a7;
+}
+
+/* Responsivo para mobile */
+@media (max-width: 480px) {
+  .header-link {
+    font-size: 0.7rem;
+    padding: 4px 6px;
+  }
+}
+
+/* ------------------------------ */
+/* Estilo do carrossel de imagens */
+/* ------------------------------ */
+.carousel {
+  margin: 40px auto;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.carousel-images {
+  .carousel-image {
+    flex: 0 0 100%;
+    display: none;
+    max-height: 600px; /* ajusta o tamanho da imagem do carrossel */
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto;
+    background-color: #000; /* fundo para destacar imagem se for menor */
+  }
+}
+
+.carousel-image {
+  max-height: 500px; /* Tamanho ideal ajustado */
+  width: 100%;
+  object-fit: contain; /* Garante que a imagem não será cortada */
+  background-color: #000;
+}
+
+.carousel-image.active {
+  display: block;
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.carousel-btn {
+  background-color: rgba(255, 105, 180, 0.8);
+  color: #fff;
+  border: none;
+  padding: 1px 3px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-btn:hover {
+  background-color: #d94c96;
+}
+
+/* ------------------------------ */
+/* Estilo da dedicatória         */
+/* ------------------------------ */
+.dedication {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 30px 20px;
+  color: #eee;
+  text-align: center;
+}
+
+/* ------------------------------ */
+/* Estilos para dispositivos móveis */
+/* ------------------------------ */
+@media (max-width: 480px) {
+  .btn-enter {
+    padding: 16px 32px;
+    font-size: 1.2rem;
+  }
+
+  .main-title {
+    font-size: 1.5rem;
+  }
+
+  .carousel-image {
+    max-height: 100px; /* imagens menores para telas pequenas */
+  }
+
+  .header-link {
+    font-size: 0.75rem;
+    margin-left: 6px;
+  }
+}
+
+/* ------------------------------ */
+/* Estilo da seção Comunidade     */
+/* ------------------------------ */
+.comunidade-section {
+  margin-top: 40px;
+}
+
+.qr-code-img {
+  width: 200px;
+  height: auto;
+  margin: 20px auto;
+  display: block;
+}
+
+/* ------------------------------ */
+/* Trilha de Conhecimento         */
+/* ------------------------------ */
+.trilha-section {
+    margin: 100px auto 40px; /* espaço abaixo do header */
+    display: flex;
+    flex-direction: column;
+    gap: 24px; /* espaçamento entre botões */
+    align-items: center;
+}
+
+/* Estilo base dos botões da trilha */
+.trail-button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* texto alinhado à esquerda do ícone */
+    gap: 16px; /* distância entre ícone e texto */
+    background-color: #ff69b4;
+    color: #fff;
+    text-decoration: none;
+    padding: 16px 24px;
+    border-radius: 50px; /* cantos arredondados tipo pílula */
+    font-size: 1rem;
+    font-weight: bold;
+    width: 90%; /* ocupa 90% da largura em mobile */
+    max-width: 400px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* sombra leve */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+    .trail-button:hover {
+        background-color: #e055a7;
+        transform: translateY(-2px); /* efeito de levantar ao passar o mouse */
+    }
+
+/* Ícones da trilha - círculos com imagem ao centro */
+.icon {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    background-color: #000;
+    border-radius: 50%;
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+}
+
+/* Ícones específicos - substitua os arquivos conforme seu projeto */
+.icon-marketing {
+    background-image: url('icons/marketing.svg');
+}
+
+.icon-digital {
+    background-image: url('icons/digital.svg');
+}
+
+.icon-relacionamento {
+    background-image: url('icons/cliente.svg');
+}
+
+.icon-conteudo {
+    background-image: url('icons/conteudo.svg');
+}
+
+.icon-metricas {
+    background-image: url('icons/metricas.svg');
+}
+
+/* Botões desabilitados (conteúdos futuros) */
+.trail-disabled {
+    background-color: #DCDCDC; /* cinza claro para indicar inativo */
+    color: #666;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+    .trail-disabled:hover {
+        background-color: #DCDCDC; /* mantém aparência ao passar o mouse */
+        transform: none;
+    }
+
+/* ------------------------------ */
+/* Estilo para título principal   */
+/* ------------------------------ */
+.main-title {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+/* ------------------------------ */
+/* Vídeo responsivo               */
+/* ------------------------------ */
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* Proporção 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    margin-bottom: 40px;
+}
+
+    .video-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+/* ------------------------------ */
+/* Botão de acesso ao quiz        */
+/* ------------------------------ */
+.btn-enter {
+    padding: 16px 32px;
+    font-size: 1rem;
+    border-radius: 30px;
+    background-color: #fff;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+    .btn-enter:hover {
+        background-color: #e0e0e0;
+    }
+/* Página de artigos */
+.artigos-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  text-align: center;
+}
+
+.artigos-section .main-title {
+  font-size: 1.8rem;
+  color: #E91E63;
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* Estiliza a seção principal de artigos com margem para separar do cabeçalho e centraliza o conteúdo */
+.artigos-section {
+    margin: 100px auto 40px;
+    text-align: center;
+}
+
+/* Cria uma grade responsiva para os cards dos artigos/vídeos
+   - Usa 1 a 3 colunas, conforme o espaço disponível na tela
+   - Gap de 24px entre os itens
+   - Padding horizontal para afastar dos cantos da tela em telas pequenas */
+.artigos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+    margin-top: 32px;
+    padding: 0 20px;
+}
+
+/* Estiliza cada card da grade:
+   - Layout em coluna com conteúdo centralizado
+   - Fundo rosa vibrante (#ff69b4)
+   - Cantos arredondados e espaçamento interno
+   - Transição suave ao passar o mouse
+   - Remove sublinhado de links */
+.artigo-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff69b4;
+    color: #fff;
+    padding: 16px;
+    border-radius: 16px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+    /* Estiliza a imagem da miniatura:
+   - Ocupa 100% da largura do card
+   - Arredonda levemente os cantos da imagem
+   - Adiciona espaço entre a imagem e o título */
+    .artigo-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        margin-bottom: 12px;
+    }
+
+    /* Efeito de destaque no card quando o mouse passa por cima (hover) */
+    .artigo-card:hover {
+        transform: scale(1.05);
+    }
+
+    /* Estiliza o card de "Em breve..."
+   - Fundo cinza claro (#ccc)
+   - Cor do texto escura
+   - Remove interações com o mouse
+   - Aplica estilo itálico para indicar conteúdo indisponível */
+    .artigo-card.disabled {
+        background-color: #ccc;
+        color: #333;
+        pointer-events: none;
+        font-style: italic;
+    }
